@@ -23,8 +23,8 @@ board.on("ready", function() {
 			ch.assertQueue("jenkins-ci", {exclusive: true, autoDelete: true});
 			ch.consume("jenkins-ci", function(msg) {
 				console.log(msg.content.toString());
-				lcd.cursor(1, 0);
-				lcd.print(msg.content.toString());
+				//lcd.cursor(1, 0);
+				lcd.clear().print(msg.content.toString());
 			}, {noAck: true});
 		});
 	});
