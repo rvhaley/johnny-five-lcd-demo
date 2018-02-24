@@ -1,9 +1,7 @@
 var five = require("johnny-five");
 var amqp = require('amqplib/callback_api');
 
-var board = new five.Board({
-	port: "COM5"
-});
+var board = new five.Board();
 
 board.on("ready", function() {
 
